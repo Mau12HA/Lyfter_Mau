@@ -1,0 +1,22 @@
+<aside>
+💡
+
+**Ejercicios**
+
+1. Cree diagramas de flujo de los [Ejercicios de Pseudocódigo](https://www.notion.so/Ejercicios-de-Pseudoc-digo-8626a7a9b3d54e5ca185e1b01aa3546f?pvs=21) previamente creados.
+
+![1_Diagrama de flujo  Precio Producto.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8050d946-e5e0-483a-8075-8c26331adf05/887e905b-9b0c-4f82-b732-f23ecf7afbed/1_Diagrama_de_flujo__Precio_Producto.png)
+
+![3_Diagrama de flujo Suma de numeros.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8050d946-e5e0-483a-8075-8c26331adf05/98feaa64-b9a1-4c09-af3d-7ec74ee049a5/3_Diagrama_de_flujo_Suma_de_numeros.png)
+
+![2_Diagrama de flujo.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8050d946-e5e0-483a-8075-8c26331adf05/4fb6ddad-0729-4d5b-8768-bce7fec6feb6/2_Diagrama_de_flujo.png)
+
+1. Cree un diagrama de flujo que tenga un numero secreto del 1 al 10, y le pida al usuario adivinar ese número. El algoritmo no debe terminar hasta que el usuario adivine el numero.
+
+![Ejercicio2 Diagrama Numero Secreto.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8050d946-e5e0-483a-8075-8c26331adf05/e5f7dcb1-6833-4074-8490-80b575254fc1/Ejercicio2_Diagrama_Numero_Secreto.png)
+
+1. Cree un diagrama de flujo que pida 3 números al usuario. Si uno de esos números es 30, o si los 3 sumados dan 30, mostrar “*Correcto*”. Sino, mostrar “*incorrecto*”.
+    
+    ![Ejercicio3 Diagrama numero 30.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8050d946-e5e0-483a-8075-8c26331adf05/8c73734d-75b9-4174-a6d4-2f5c5a397a5b/Ejercicio3_Diagrama_numero_30.png)
+    
+</aside>

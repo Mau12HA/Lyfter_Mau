@@ -1,0 +1,146 @@
+1. Cree un pseudocódigo que le pida un `precio de producto` al usuario, calcule su descuento y muestre el precio final tomando en cuenta que:
+    1. Si el precio es menor a 100, el descuento es del 2%.
+    2. Si el precio es mayor o igual a 100, el descuento es del 10%.
+    
+    ### **Respuesta**
+    
+    1. Definir precio
+    2. Definir descuento
+    3. Definir precio_final
+    4. Mostrar “Ingresar Precio”
+    5. Leer precio
+    6. Si (precio < a 100) entonces:
+        1. descuento = (precio * 0.02)
+    7. Sino:
+        1. Si (precio ≥ a 100) entonces:
+            1. descuento = (precio * 0.1)
+    8. FinSi
+    9. precio_final = precio - descuento
+        1. **Inicio**
+    10. Mostrar “El precio con Descuento es :”
+    11. Mostrar “precio_final”
+    12. **Fin**
+    
+2. Cree un pseudocódigo que le pida un `tiempo en segundos` al usuario y calcule si es menor o mayor a 10 minutos. Si es menor, muestre cuantos segundos faltarían para llegar a 10 minutos. Si es mayor, muestre “*Mayor*”.
+    
+    ### **Respuesta**
+    
+    1. **Inicio**
+    2. Definir tiempo_segundos
+    3. Definir tiempo_Mm
+    4. Mostrar “Ingrese el tiempo en segundos”
+    5. Leer tiempo_segundos
+    6. Si (tiempo_segundos > a 600 ) entonces:
+        1. Mostrar “MAYOR”
+    7. Sino:
+        1. Si (tiempo_segundos < a 600) entonces:
+            1. tiempo_Mm = 600 - tiempo_segundos 
+            2. Mostrar “Segundos Restantes :”
+            3.  Mostrar tiempo_Mm 
+    8. FinSi
+    9. **Fin**
+    
+3. Cree un algoritmo que le pida un numero al usuario y muestre la suma de todos los números desde 1 hasta ese número.
+
+1. 3 → 6 (1 + 2 + 3)
+2. 5 → 15 (1 + 2 + 3 + 4 + 5)
+3. 12 → 78 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12)
+
+### Respuesta
+
+1. Inicio
+2. Definir num
+3. Definir i
+4. Definir suma
+5. Mostrar “Ingrese un Numero entero”
+6. Leer num
+7. suma = 0
+8. i = 1
+9. Mientras  que( i ≤ num) hacer:
+    1. suma = suma + i
+10. FinMientras
+11. Mostrar “La suma de los” , num , ” números es de:”
+12. Mostrar suma
+13. Fin
+
+<aside>
+💡
+
+**Ejercicios Extra**
+
+1. Cree un algoritmo que le pida 2 números al usuario, los guarde en dos variables distintas (`primero` y `segundo`) y los ordene de menor a mayor en dichas variables.
+    1. Ejemplos:
+        1. A: 56, B: 32 → A: 32, B: 56
+        2. A: 24, B: 76 → A: 24, B: 76
+        3. A: 45, B: 12 → A: 12, B: 45
+    
+    ### Respuesta
+    
+    1. Inicio
+    2. Definir num1
+    3. Definir num2
+    4. Mostrar “Ingresar un número”
+    5. Leer num1
+    6. Mostrar “Ingresar otro número”
+    7. Leer num2
+    8. Si num1 < num2 entonces:
+        1. Mostrar “ A: ” ,num1, ” B: ” ,num2
+    9. Sino:
+        1. Mostrar “ A: ” ,num2, ” B: ” ,num1
+    10. FinSi
+    11. Fin
+    
+2. Cree un algoritmo que le pida al usuario una velocidad en km/h y la convierta a m/s. Recuerda que `1 km == 1000m` y `1 hora == 60 minutos * 60 segundos`.
+    1. *Ejemplos*:
+        1. 73 → 20.27
+        2. 50 → 13.88
+        3. 120 → 33.33
+    
+    ### Respuesta
+    
+    1. Inicio
+    2. Definir velocidad_kmh
+    3. Definir velocidad_ms
+    4. Mostrar “Ingresar la Velocidad km/h  ”
+    5. Leer velocidad_kmh
+    6. velocidad_ms = velocidad_kmh /3.6
+    7. Mostrar velocidad_kmh “ km/h convertido a m/s es de : ”, velocidad_ms
+    8. Fin
+    
+3. Cree un algoritmo que le pregunte al usuario por el sexo de 6 personas, ingresando 1 si es mujer o 2 si es hombre, y muestre al final el porcentaje de mujeres y hombres.
+    1. *Ejemplos*:
+        1. 1, 1, 1, 2, 2, 2 → 50% mujeres y 50% hombres
+        2. 1, 1, 2, 2, 2, 2 → 33.3% mujeres y 66.6% hombres
+        3. 1, 1, 1, 1, 1, 2 → 84.4% mujeres y 16.6% hombres
+    
+    ### Respuesta
+    
+    1. Inicio
+    2. Definir contador
+    3. Definir sexo
+    4. Definir total_mujeres
+    5. Definir total_hombres
+    6. Definir porcentaje_mujeres
+    7. Definir porcentaje_hombres
+    8. contador= 1
+    9. total_mujeres = 0
+    10. total_hombres = 0
+    11. porcentaje_mujeres = 0
+    12. porcentaje_hombres = 0
+    13. Mientras que (contador≤ 6) hacer:
+        1. Mostrar “ Ingrese el # 1 si es Mujer ó el # 2 si es Hombre”
+        2. Leer sexo
+        3. Si sexo= 1 entonces:
+            1. total_mujeres = total_mujeres + 1
+        4. Sino:
+            1. total_hombres = total_hombres + 1
+        5. FinSi
+        6. contador = contador + 1
+    14. FinMientras
+    15. porcentaje_mujeres  = ( total_mujeres / 6 ) * 100
+    16. porcentaje_hombres  = ( total_hombres / 6 ) * 100
+    17. Mostrar “El porcentaje de mujeres es :”, porcentaje_mujeres , “%”
+    18. Mostrar “El porcentaje de hombres es :”, porcentaje_hombres  , “%”
+    19. Fin
+    
+</aside>
