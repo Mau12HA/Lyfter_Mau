@@ -1,0 +1,46 @@
+**Ver video YouTube**
+
+1. Inicio
+2. Si tienes computadora
+    1. Encender computador
+    2. Ingresar al navegador
+    3. Buscar youtube.com
+3. Sino, si tiene celular, o si tiene Tablet, o si tiene Smart TV
+    1. Encender dispositivo
+    2. Ingresar a la app YouTube
+4. Sino
+    1. Buscar alguno de los anteriores y pedirlo prestado
+5. Buscar el video
+6. Reproducir
+7. Fin
+
+**Rutina diaria**
+
+1. Inicio
+2. Despertarme
+    1. Apagar alarma
+    2. Cepillar dientes
+    3. Bañarme
+3. Si es lunes, o martes, o miércoles, o jueves, o viernes, o sábado
+    1. Ir a trabajar
+    2. Desayunar
+    3. Almorzar
+    4. Tomar café
+4. Sino, si es Domingo
+    1. Seguir durmiendo hasta tarde
+    2. Lavar dientes
+    3. Desayuno-Almuerzo
+    4. Descansar o Pasear
+5. Regresar a casa
+6. Cenar Si hay pereza
+    1. Pedir algo de cenar
+    
+    Sino Preparar cena
+    
+7. Tomar un baño
+8. Cepillar dientes mientras no termine de cepillar lengua
+    1. Cepillar dientes de arriba
+    2. Cepillar dientes de abajo
+    3. Cepillar lengua
+9. Dormir
+10. Fin

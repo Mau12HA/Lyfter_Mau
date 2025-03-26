@@ -1,0 +1,98 @@
+[
+    {
+        "name": {
+            "english": "Pikachu"
+        },
+        "type": [
+            "Electric"
+        ],
+        "base": {
+            "HP": 35,
+            "Attack": 55,
+            "Defense": 40,
+            "Sp. Attack": 50,
+            "Sp. Defense": 50,
+            "Speed": 90
+        }
+    },
+    {
+        "name": {
+            "english": "Charmander"
+        },
+        "type": [
+            "Fire"
+        ],
+        "base": {
+            "HP": 39,
+            "Attack": 52,
+            "Defense": 43,
+            "Sp. Attack": 60,
+            "Sp. Defense": 50,
+            "Speed": 65
+        }
+    },
+    {
+        "name": {
+            "english": "Squirtle"
+        },
+        "type": [
+            "Water"
+        ],
+        "base": {
+            "HP": 44,
+            "Attack": 48,
+            "Defense": 65,
+            "Sp. Attack": 50,
+            "Sp. Defense": 64,
+            "Speed": 43
+        }
+    },
+    {
+        "name": {
+            "english": "Bulbasaur"
+        },
+        "type": [
+            "Planta"
+        ],
+        "base": {
+            "HP": 32,
+            "Attack": 40,
+            "Defense": 35,
+            "Sp. Attack": 30,
+            "Sp. Defense": 40,
+            "Speed": 28
+        }
+    },
+    {
+        "name": {
+            "english": "Squirtle"
+        },
+        "type": [
+            "Agua"
+        ],
+        "base": {
+            "HP": 34,
+            "Attack": 25,
+            "Defense": 27,
+            "Sp. Attack": 33,
+            "Sp. Defense": 31,
+            "Speed": 35
+        }
+    },
+    {
+        "name": {
+            "english": "Ditto"
+        },
+        "type": [
+            "Normal"
+        ],
+        "base": {
+            "HP": 23,
+            "Attack": 33,
+            "Defense": 22,
+            "Sp. Attack": 21,
+            "Sp. Defense": 25,
+            "Speed": 36
+        }
+    }
+]
