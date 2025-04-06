@@ -12,7 +12,6 @@ class Person:
         self.name = name
 
 
-
 class Bus:
 
     def __init__(self,max_passengers):

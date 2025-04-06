@@ -4,7 +4,6 @@
     2. Un método de `get_area` que retorne su área.
 """
 
-
 class Circle:
 
     radius = 0
