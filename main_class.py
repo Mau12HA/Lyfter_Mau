@@ -39,5 +39,3 @@ while True:
         continue
     else:    
         print("ERROR!!! Ingresar solamente (m) para seguir ó (s) para salir")
-
-        

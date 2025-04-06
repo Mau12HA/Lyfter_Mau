@@ -22,4 +22,3 @@ def menu_system_student():
             print("Ingrese un número entero del 1 al 6 para seleccionar una opcion válida del menu \n")
 
     return operation
-

@@ -126,4 +126,3 @@ student.get_top_3_students(students_list)
 student.students_information(students_list)
 
 student.calculate_total_average(students_list)
-
