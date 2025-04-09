@@ -18,50 +18,33 @@ class Head:
 
 class Torso:
     def __init__(self):
-        self.head = 1
-        self.right_arm = 1
-        self.left_arm = 1
-        self.right_leg = 1
-        self.left_leg = 1
-        
+        self.head = Head()
+        self.right_arm = Arm()
+        self.left_arm = Arm()
+        self.right_leg = Leg()
+        self.left_leg = Leg()
 
 class Arm:
 	def __init__(self):
-		self.right_arm = 1
-		self.left_arm = 1
+		self.hand = Hand()
+		self.fingers = 5
 		
-      
 class Hand:
 	def __init__(self):
 		self.fingers = 5
-		self.right_hand = 1
-		self.left_hand = 1
 		
-	
 class Leg:
 	def __init__(self):
-		self.right_leg = 1
-		self.left_leg = 1
+		self.feet = Feet()
+		self.toes = 5
 		
 
 class Feet:
 	def __init__(self):
 		self.toes = 5
-		self.right_feet = 1
-		self.left_feet = 1
-	
+
 class Human:
     def __init__(self):
-            self.head = Head()
-            self.torso = Torso()
-            self.right_arm = Arm()
-            self.left_arm = Arm()
-            self.right_hand = Hand()
-            self.left_hand = Hand()
-            self.right_leg = Leg()
-            self.left_leg = Leg()
-            self.right_feet = Feet()
-            self.left_feet = Feet()
+        self.torso = Torso()
         
-
 human = Human()

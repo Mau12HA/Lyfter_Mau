@@ -5,15 +5,19 @@
 """
 
 
+import math
+
+
 class Circle:
 
-    radius = 0
+    def __init__(self):
+        self.radius = 0
 
-    def get_area(self,radius):
+    def get_area(self):
 
-        circle_area = 3.14 * radius ** 2
+        circle_area = math.pi * self.radius ** 2
         print(f"El área del círculo es: {circle_area}")
         
 
 my_cirle = Circle()
-my_cirle.get_area(8)
+my_cirle.get_area()

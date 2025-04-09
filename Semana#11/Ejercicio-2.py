@@ -8,10 +8,9 @@
 
 class Person:
     
-    def __init__(self, name):
+    def __init__(self, name, age=None):
         self.name = name
-
-
+        self.age = 0
 
 class Bus:
 
@@ -40,15 +39,15 @@ class Bus:
         if self.passengers:
             print("Pasajeros actuales en el bus:")
             for passenger in self.passengers:
-                print(f"- {passenger.name}")
+                print(f"- {passenger.name} (Edad: {passenger.age})")
         else:
             print("El bus está vacío.")
 
 bus = Bus(max_passengers = 3)
-person1 = Person("Juan")
-person2 = Person("Ana")
-person3 = Person("Luis")
-person4 = Person("Carlos")
+person1 = Person("Juan", age= 25)
+person2 = Person("Ana", age= 30)
+person3 = Person("Luis", age= 22)
+person4 = Person("Carlos", age= 28)
 
 
 bus.add_passenger(person1) 
