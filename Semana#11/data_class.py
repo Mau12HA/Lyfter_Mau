@@ -19,7 +19,7 @@ class Data:
         if self.students_list:
             self.write_csv_file('students.csv', self.students_list[0].keys())
         else:
-            print("No hay estudiantes para exportar")
+            print("There are no students to export")
 
     def import_csv_files(self, students_file):
         """Importa los estudiantes desde un archivo CSV."""
@@ -31,7 +31,7 @@ class Data:
                     self.students_list.append(student)
                 return self.students_list
         except FileNotFoundError:
-            print("¡El archivo no existe!")
+            print("The file does not exist!")
             return []
 
 students_list = []

@@ -22,26 +22,26 @@ class Bus:
     def add_passenger(self, person):
         if len(self.passengers) < self.max_passengers:
             self.passengers.append(person)
-            print(f'{person.name} ha subido al bus')
+            print(f'{person.name} is in the bus')
         else:
-            print("El bus está lleno, no se puede agregar más pasajeros")
+            print("The bus is full, you can not add more passengers.")
 
 
     def remove_passenger(self,person):
         if person in self.passengers:
             self.passengers.remove(person)
-            print(f"{person.name} ha bajado del bus.")
+            print(f"{person.name} is out bus.")
         else:
-            print(f"{person.name} no está en el bus.")
+            print(f"{person.name} is not in the bus.")
 
 
     def list_passengers(self):
         if self.passengers:
-            print("Pasajeros actuales en el bus:")
+            print("Passengers in the bus:")
             for passenger in self.passengers:
-                print(f"- {passenger.name} (Edad: {passenger.age})")
+                print(f"- {passenger.name} (Age: {passenger.age})")
         else:
-            print("El bus está vacío.")
+            print("The bus is empty.")
 
 bus = Bus(max_passengers = 3)
 person1 = Person("Juan", age= 25)

@@ -4,21 +4,21 @@ def menu_system_student():
 
     while True:
         try:
-            operation = int(input("\nSELECCIONE LA OPCION QUE DESEA REALIZAR\n"
-                                "\n1. Ingresar estudiante"
-                                "\n2. Ver los estudiantes ingresados"
-                                "\n3. TOP #3 mejores promedio"
-                                "\n4. Promedio General"
-                                "\n5. Exportar datos en un archivo CSV"
-                                "\n6. Importar datos en un archivo CSV\n \n"))
+            operation = int(input("\nSELECT AN OPTION\n"
+                                "\n1. Add student"
+                                "\n2. See students information"
+                                "\n3. TOP #3 students"
+                                "\n4. General average"
+                                "\n5. Export file CSV"
+                                "\n6. Import file CSV\n \n"))
 
                             
             if(operation <=6 and operation > 0):
                 
                 break 
             else:
-                print("Opción NO valida, ingrese una opcion valida del menu")
+                print("Wrong option, enter a valid option from the menu")
         except ValueError:
-            print("Ingrese un número entero del 1 al 6 para seleccionar una opcion válida del menu \n")
+            print("Enter an integer from 1 to 6 to select a valid menu option. \n")
 
     return operation

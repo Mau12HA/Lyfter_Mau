@@ -40,14 +40,14 @@ class Student:
 
         while True:
             
-            student_name = str(input("Ingresar nombre completo: "))
-            student_group = str(input("Sección: "))
+            student_name = str(input("Full name: "))
+            student_group = str(input("Group: "))
             while True:
                 try:
-                    spanish_grade = int(input("Nota de Español: "))
-                    english_grade = int(input("Nota de Ingles: "))
-                    social_grade = int(input("Nota de Sociales: "))
-                    sciences_grade = int(input("Nota de Ciencias: "))
+                    spanish_grade = int(input("Score of Spanish: "))
+                    english_grade = int(input("Score of English: "))
+                    social_grade = int(input("Score of Social: "))
+                    sciences_grade = int(input("Score of Sciences: "))
 
                     if( 0 <= spanish_grade <=100 and 
                         0 <= english_grade <=100 and
@@ -55,10 +55,10 @@ class Student:
                         0 <= sciences_grade <=100 ):
                         break
                     else:
-                        print("ERROR, las notas deben estar entre 0 y 100, inténtalo de nuevo.")
+                        print("ERROR, The scores must be between 0 and 100, please try again.")
 
                 except ValueError:
-                    print("ERROR, debe ingresar una nota válida, inténtalo de nuevo.")
+                    print("ERROR, You must enter a valid score, please try again.")
 
             
             student = Student(student_name, student_group, spanish_grade, english_grade, social_grade, sciences_grade)
@@ -69,7 +69,7 @@ class Student:
             
             average_grade = float((spanish_grade + english_grade + social_grade + sciences_grade) / 4)
             
-            add_another = input("¿Quieres ingresar otro estudiante? (s/n): ").lower()
+            add_another = input("¿Do you wnt to add another student? (s/n): ").lower()
             if add_another != 's':
                 break
 
@@ -80,33 +80,33 @@ class Student:
 
         top_students = sorted(students_list, key=lambda x: x["average_grade"],reverse=True)
 
-        print("\nTop #3 Estudiantes con Mejor Promedio:")
+        print("\nTop #3 best average of students:")
         for i in range(min(3, len(top_students))):  # Si hay menos de 3 estudiantes, muestra todos
             student = top_students[i]
-            print(f"\n#{i+1} - {student['student_name']} (Sección {student['student_group']})")
-            print(f"Promedio: {student["average_grade"]}")
+            print(f"\n#{i+1} - {student['student_name']} (Group {student['student_group']})")
+            print(f"Averages: {student["average_grade"]}")
 
 
 
     def students_information(self,students_list):
 
-        print("\nInformación de los Estudiantes:")
+        print("\nStudents Info:")
         for student in students_list:
             average_grade = float(student['average_grade'])
             print("\n-------------------------")
-            print(f"Nombre: {student['student_name']} (Sección {student['student_group']})")
-            print(f"Español: {student['spanish_grade']}")
-            print(f"Ingles: {student['english_grade']}")
-            print(f"Sociales: {student['social_grade']}")
-            print(f"Ciencias: {student['sciences_grade']}")
-            print(f"Promedio: {student["average_grade"]:.2f}")
+            print(f"Name: {student['student_name']} (Group {student['student_group']})")
+            print(f"Spanish: {student['spanish_grade']}")
+            print(f"English: {student['english_grade']}")
+            print(f"Social: {student['social_grade']}")
+            print(f"Sciences: {student['sciences_grade']}")
+            print(f"Average: {student["average_grade"]:.2f}")
 
             
 
     def calculate_total_average(self,students_list):
         
         if len(students_list) == 0:
-            print("No hay estudiantes para calcular el promedio.")
+            print("There are no Students.")
             return
         
         total_average = 0
@@ -115,7 +115,7 @@ class Student:
             total_average += float(student["average_grade"])
         
         overall_average = total_average / len(students_list)
-        print(f"El promedio de todos los promedios es: {overall_average:.2f}")
+        print(f"The general average is: {overall_average:.2f}")
 
 students_list = []
 
