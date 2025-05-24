@@ -38,4 +38,3 @@ def test_bubble_sort_invalid_input():
     with pytest.raises(TypeError):
         bubble_sort(test_list)
 
-
