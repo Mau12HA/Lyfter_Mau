@@ -12,17 +12,19 @@ def update_table(window,manager):
     window['-TABLE-'].update(values=table_data)
 
 def show_main_window():
-    """Creates and returns the main window layout for the Personal Finance Manager."""
+     """Creates and returns the main window layout for the Personal Finance Manager."""
 
-    layout = [
-        [sg.Text('Welcome to the Personal Finance Manager!')],
-        [sg.Table(values=[['','', '0', ''], ['','','0', '']], justification='center', expand_x=True, expand_y=True,
-                  headings=['Type', 'Title', 'Amount', 'Category'], auto_size_columns=True, num_rows=5, key='-TABLE-')],
-        [sg.Text('Please select income or expenses:')],
-        [sg.Button('New Category')],[sg.Button('Income')],[sg.Button('Expenses')],[sg.Button('Exit')],
+     layout = [
+            [sg.Text('Welcome to the Personal Finance Manager!')],
+            [sg.Table(values=[['','', '0', ''], ['','','0', '']], 
+                    justification='center', expand_x=True, expand_y=True,
+                    headings=['Type', 'Title', 'Amount', 'Category'], 
+                    auto_size_columns=True, num_rows=5, key='-TABLE-')],
+            [sg.Text('Please select income or expenses:')],
+            [sg.Button('New Category')],[sg.Button('Income')],[sg.Button('Expenses')],[sg.Button('Exit')],
     ]
 
-    return sg.Window('Personal Finance Manager',layout)
+     return sg.Window('Personal Finance Manager',layout)
 
 
 def show_category_window():
@@ -52,7 +54,7 @@ def show_income_window(manager):
 
 def show_expense_window(manager):
     """Creates and returns the window layout for adding a new expense entry."""
-    
+
     layout = [
         [sg.Text('Add Expense')],
         [sg.Text('Amount'), sg.InputText(key='expense_amount')],

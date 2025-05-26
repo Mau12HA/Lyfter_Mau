@@ -7,7 +7,7 @@ from interfaces import show_main_window, show_category_window, show_income_windo
 
 def main():
     """Main function to run the Personal Finance Manager application."""
-    
+
     manager = FinanceManager()
     load_from_file(manager)
 
@@ -44,8 +44,13 @@ def main():
                     amount = float(val['income_amount'])
                     title = val['income_title']
                     category = val['income_category']
+                    if not title:
+                        raise ValueError("Title cannot be empty.")
+                    if not category:
+                        raise ValueError("Category must be selected.")
                     manager.add_movement('income', amount, title, category)
                     sg.popup('Income added!')
+                    update_table(main_window, manager)
                 except Exception as e:
                     sg.popup_error(str(e))
             win.close()
@@ -61,6 +66,10 @@ def main():
                     amount = float(val['expense_amount'])
                     title = val['expense_title']
                     category = val['expense_category']
+                    if not title:
+                        raise ValueError("Title cannot be empty.")
+                    if not category:
+                        raise ValueError("Category must be selected.")
                     manager.add_movement('spent', amount, title, category)
                     sg.popup('Expense added!')
                 except Exception as e:
