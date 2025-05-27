@@ -24,7 +24,7 @@ def show_main_window():
             [sg.Button('New Category')],[sg.Button('Income')],[sg.Button('Expenses')],[sg.Button('Exit')],
     ]
 
-     return sg.Window('Personal Finance Manager',layout)
+     return sg.Window('Personal Finance Manager',layout,finalize=True)
 
 
 def show_category_window():

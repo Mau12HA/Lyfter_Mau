@@ -72,6 +72,7 @@ def main():
                         raise ValueError("Category must be selected.")
                     manager.add_movement('spent', amount, title, category)
                     sg.popup('Expense added!')
+                    update_table(main_window, manager)
                 except Exception as e:
                     sg.popup_error(str(e))
             win.close()
