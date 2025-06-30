@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Delete",
+        "description": "Delete files from HHD",
+        "status": "To do"
+    },
+    {
+        "id": 2,
+        "title": "Create",
+        "description": "Create files on HHD",
+        "status": "Done"
+    },
+    {
+        "id": 3,
+        "title": "Update",
+        "description": "Update files on HHD",
+        "status": "Done"
+    },
+    {
+        "id": 4,
+        "title": "Read",
+        "description": "Read files from HHD",
+        "status": "Done"
+    }
+]
