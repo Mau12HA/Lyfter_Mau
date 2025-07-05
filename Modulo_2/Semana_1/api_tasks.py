@@ -11,9 +11,11 @@ STATUS = ['To do', 'In Progress', 'Done']
 def load_tasks():
     if not os.path.exists(TASKS_FILE):
         return []
-    with open(TASKS_FILE, 'r') as file:
-        return json.load(file)
-    
+    try:
+        with open(TASKS_FILE, 'r') as file:
+            return json.load(file)
+    except (json.JSONDecodeError, IOError):
+        return []
 
 def save_tasks(tasks):
     with open(TASKS_FILE, 'w') as file:
@@ -41,7 +43,10 @@ def validate_task(data,existing_tasks):
         errors.append(f"Status must be one of: {','.join(STATUS)}.")
     return errors
 
-@app.route('/get_tasks', methods=['GET'])
+#API Endpoints
+
+#READ
+@app.route('/tasks', methods=['GET'])
 def get_tasks():
     tasks = load_tasks()
     status = request.args.get('status')
@@ -51,8 +56,17 @@ def get_tasks():
         tasks = [task for task in tasks if task['status'] == status]
     return jsonify(tasks), 200
 
+@app.route('/tasks/<int:task_id>', methods=['GET'])
+def get_task(task_id):
+    tasks = load_tasks()
+    task = next((task for task in tasks if task['id'] == task_id), None)
+    if not task:
+        return jsonify({'error': 'Task not found'}), 404
+    return jsonify(task), 200
 
-@app.route('/create_task', methods=['POST'])
+
+#CREATE
+@app.route('/tasks', methods=['POST'])
 def create_task():
     tasks = load_tasks()
     data = request.json
@@ -61,28 +75,42 @@ def create_task():
         return jsonify ({'errors': errors}), 400
     tasks.append(data)
     save_tasks(tasks)
-    return jsonify ({"message:",'Task created successfully'}), 201
+    return jsonify ({'message':'Task created successfully'}), 201
 
-
-@app.route('/update_task/<int:task_id>', methods=['PUT'])
+#UPDATE
+@app.route('/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
     tasks = load_tasks()
     task = next((task for task in tasks if task['id'] == task_id), None)
     if not task:
         return jsonify({'error': 'Task not found'}), 404
+    
     data = request.json
+
+    if 'id' in data and data['id'] != task_id:
+        return jsonify({'error': 'Cannot modify task ID'}), 400
+
     if 'status' in data and data['status'] not in STATUS:
         return jsonify({'error': f'Status must be one of: {", ".join(STATUS)}.'}), 400
     
+    for field in ['title', 'description', 'status']:
+        if field in data and not data[field]:
+            return jsonify({'error': f'{field.capitalize()} cannot be empty'}), 400
+
+
     task.update(data)
     save_tasks(tasks)
     return jsonify({'message': 'Task updated successfully'}), 200
 
-
-@app.route('/delete_task/<int:task_id>', methods=['DELETE'])
+#DELETE
+@app.route('/tasks/<int:task_id>', methods=['DELETE'])
 def delete_task(task_id):
     tasks = load_tasks()
-    new_list_tasks = [task for task in tasks if task['id'] != task_id] #Carga las tareas y crea una nueva lista sin la tarea con el id indicado
+    new_list_tasks = [task for task in tasks if task['id'] != task_id]
+    
+    if len(new_list_tasks) == len(tasks):
+        return jsonify({'error': 'Task not found'}), 404
+    
     save_tasks(new_list_tasks)
     return jsonify({'message': 'Task deleted successfully'}), 200
 
